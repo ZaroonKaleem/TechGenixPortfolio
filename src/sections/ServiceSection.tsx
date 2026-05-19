@@ -42,11 +42,12 @@ const services: ServiceItem[] = [
 
 const ServiceSection: React.FC = () => {
   return (
-    <section className="py-24">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="services" className="py-24 bg-gray-900">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-semibold text-[#2DD3F1] uppercase tracking-wider">
+          <span className="inline-flex mb-6 items-center px-5 py-2 text-sm font-semibold tracking-wider rounded-full bg-[#2DD3F1]/10 text-[#2DD3F1] border border-[#2DD3F1]/20">
             What We Offer
           </span>
           <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white">
@@ -54,30 +55,27 @@ const ServiceSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Grid — full-width responsive, no overflow trick */}
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-6 rounded-xl bg-white/5 hover:bg-[#2229D2]/20 transition-all duration-300"
+              className="group p-6 sm:p-8 rounded-xl bg-white/5 hover:bg-[#2DD3F1] transition-all duration-300 flex flex-col justify-start items-start text-left aspect-auto lg:aspect-square"
             >
               {/* Icon */}
-              <div className="mb-4 text-4xl text-[#32CD89]">
+              <div className="mb-5 text-4xl text-[#2DD3F1] group-hover:text-black transition-colors">
                 {service.icon}
               </div>
 
               {/* Title */}
-              <h4 className="text-lg font-semibold mb-2 text-white">
-                <Link
-                  href={service.href}
-                  className="hover:text-[#2DD3F1] transition"
-                >
+              <h4 className="text-xl font-semibold mb-3 text-white group-hover:text-black transition-colors">
+                <Link href={service.href} className="transition-colors duration-300">
                   {service.title}
                 </Link>
               </h4>
 
               {/* Description */}
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-white/50 text-base leading-relaxed group-hover:text-black transition-colors duration-100">
                 {service.description}
               </p>
             </div>

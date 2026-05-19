@@ -19,27 +19,27 @@ const quickLinks = [
 
 const FooterTop: React.FC = () => {
   return (
-    <footer className="pt-24 border-t border-white/10">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="pt-28 md:pt-36 border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 xl:gap-20">
 
           {/* GET IN TOUCH */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">
+          <div className="flex flex-col gap-7">
+            <h4 className="text-xl font-semibold text-white tracking-wide">
               Get In Touch
             </h4>
-            <p className="text-sm text-white/50 mb-5 leading-relaxed">
+            <p className="text-base text-white/50 leading-loose">
               Our team comprises professionals with years of experience delivering cutting-edge IT solutions.
             </p>
 
             {/* Email */}
-            <div className="flex items-center gap-2 text-sm mb-5">
-              <span className="text-[#32CD89]">✉</span>
+            <div className="flex items-center gap-3">
+              <span className="text-[#2DD3F1] text-lg">✉</span>
               <a
                 href="mailto:hmstech11@gmail.com"
-                className="text-white/60 hover:text-[#2DD3F1] transition"
+                className="text-base text-white/60 hover:text-[#2DD3F1] transition"
               >
-                hmstech11@gmail.com
+                techgenix@gmail.com
               </a>
             </div>
 
@@ -48,11 +48,11 @@ const FooterTop: React.FC = () => {
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full px-4 py-2 text-sm outline-none bg-transparent text-white placeholder-white/30"
+                className="w-full px-5 py-3 text-sm outline-none bg-transparent text-white placeholder-white/30"
               />
               <button
                 type="button"
-                className="px-4 text-[#2DD3F1] hover:bg-[#2229D2] hover:text-white transition py-2"
+                className="px-5 py-3 text-[#2DD3F1] hover:bg-[#2229D2] hover:text-white transition"
               >
                 ➤
               </button>
@@ -60,14 +60,16 @@ const FooterTop: React.FC = () => {
           </div>
 
           {/* SERVICES */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
-            <ul className="space-y-3">
+          <div className="flex flex-col gap-7">
+            <h4 className="text-xl font-semibold text-white tracking-wide">
+              Services
+            </h4>
+            <ul className="flex flex-col gap-5">
               {services.map((service, i) => (
                 <li key={i}>
                   <Link
                     href={service.href}
-                    className="text-sm text-white/50 hover:text-[#2DD3F1] transition"
+                    className="text-base text-white/50 hover:text-[#2DD3F1] transition"
                   >
                     {service.name}
                   </Link>
@@ -77,14 +79,16 @@ const FooterTop: React.FC = () => {
           </div>
 
           {/* QUICK LINKS */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-3">
+          <div className="flex flex-col gap-7">
+            <h4 className="text-xl font-semibold text-white tracking-wide">
+              Quick Links
+            </h4>
+            <ul className="flex flex-col gap-5">
               {quickLinks.map((link, i) => (
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/50 hover:text-[#2DD3F1] transition"
+                    className="text-base text-white/50 hover:text-[#2DD3F1] transition"
                   >
                     {link.name}
                   </Link>
@@ -94,17 +98,20 @@ const FooterTop: React.FC = () => {
           </div>
 
           {/* OFFICE */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Our Office</h4>
-            <div className="space-y-3 text-sm">
-              <div>
-                <span className="text-xs text-white/35">Head Office</span>
-                <p className="mt-1 leading-relaxed text-white/55">
-                  Main Bakar Mandi Road, Liaquatabad, Near UBL Bank, Faisalabad.
-                </p>
-              </div>
+          <div className="flex flex-col gap-7">
+            <h4 className="text-xl font-semibold text-white tracking-wide">
+              Our Office
+            </h4>
+            <div className="flex flex-col gap-3">
+              <span className="text-sm text-white/35 uppercase tracking-widest">
+                Head Office
+              </span>
+              <p className="text-base leading-loose text-white/55">
+                Main Bakar Mandi Road, Liaquatabad, Near UBL Bank, Faisalabad.
+              </p>
             </div>
           </div>
+
         </div>
       </div>
     </footer>

@@ -42,49 +42,54 @@ const projects: Project[] = [
 
 const ProjectSection: React.FC = () => {
   return (
-    <section className="py-24">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="portfolio" className="py-24 px-4">
+      {/* OUTER CONTAINER */}
+      <div className="w-[90%] mx-auto rounded-[10px] border border-white/10 bg-gray-800 p-6 sm:p-8 md:p-12">
+
         {/* Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-semibold text-[#2DD3F1] uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="inline-flex mb-6 items-center px-5 py-2 text-sm font-semibold tracking-wider text-[#2DD3F1] uppercase">
             Our Work
           </span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
             Showcasing Our Best Digital Solutions
           </h2>
         </div>
 
-        {/* TOP ROW */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
-          <div className="lg:col-span-4">
-            <ProjectCard project={projects[0]} />
-          </div>
-          <div className="lg:col-span-8">
-            <div className="h-full overflow-hidden rounded-xl">
-              <img
-                src="https://hmstech.org/assets/website/images/project/h2_2.png"
-                alt="Project Showcase"
-                className="w-full h-full object-cover"
-              />
+        <div className="w-full md:w-[85%] mx-auto rounded-[10px] p-4 sm:p-8 md:p-10">
+
+          {/* TOP ROW */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+            <div className="lg:col-span-4">
+              <ProjectCard project={projects[0]} />
+            </div>
+            <div className="lg:col-span-8">
+              <div className="h-full min-h-[240px] overflow-hidden rounded-[10px] border border-white/10">
+                <img
+                  src="https://hmstech.org/assets/website/images/project/h2_2.png"
+                  alt="Project Showcase"
+                  className="w-full h-full object-cover hover:scale-105 transition duration-500"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* BOTTOM ROW */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.slice(1).map((project, i) => (
-            <ProjectCard key={i} project={project} />
-          ))}
-        </div>
+          {/* BOTTOM ROW */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {projects.slice(1).map((project, i) => (
+              <ProjectCard key={i} project={project} />
+            ))}
+          </div>
 
-        {/* CTA */}
-        <div className="text-center mt-14">
-          <Link
-            href="https://hmstech.org/portfolio"
-            className="inline-block bg-[#2229D2] text-white px-6 py-3 rounded-full hover:bg-[#1B1F9C] transition font-semibold"
-          >
-            View All Projects
-          </Link>
+          {/* CTA */}
+          <div className="text-center mt-14">
+            <Link
+              href="https://hmstech.org/portfolio"
+              className="inline-flex items-center gap-2 bg-[#2229D2] px-9 py-4 rounded-lg text-white font-semibold hover:bg-[#1B1F9C] transition duration-300"
+            >
+              View All Projects
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -93,27 +98,27 @@ const ProjectSection: React.FC = () => {
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className="group rounded-xl overflow-hidden bg-white/5 hover:bg-[#2229D2]/10 transition-all duration-300">
+    <div className="group rounded-[10px] overflow-hidden border border-white/10 bg-white/5 hover:bg-primary/10 transition-all duration-300 hover:-translate-y-1">
       {/* TEXT */}
-      <div className="p-5">
-        <h3 className="text-base font-semibold mb-2 text-white group-hover:text-[#2DD3F1] transition">
+      <div className="p-5 sm:p-6">
+        <h3 className="text-lg sm:text-xl font-semibold mb-3 text-white group-hover:text-primary-light transition-colors duration-300">
           <Link href={project.href}>{project.title}</Link>
         </h3>
-        <p className="text-sm text-white/50 leading-relaxed">
+        <p className="text-brand-muted text-sm sm:text-base leading-relaxed group-hover:text-white/80 transition-colors duration-300">
           {project.description}
         </p>
       </div>
 
       {/* IMAGE */}
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-52 object-cover"
+          className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition duration-500"
         />
         <Link
           href={project.href}
-          className="absolute top-3 right-3 text-[#2DD3F1] text-xl opacity-0 group-hover:opacity-100 transition bg-[#050816]/80 rounded-full p-1"
+          className="absolute top-4 right-4 text-primary-light text-xl opacity-0 group-hover:opacity-100 transition duration-300 bg-black/60 rounded-full p-2"
         >
           <FiArrowUpRight />
         </Link>

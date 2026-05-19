@@ -66,62 +66,68 @@ const blogs: Blog[] = [
 
 const BlogSection: React.FC = () => {
   return (
-    <section className="py-24">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+
         {/* Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-semibold text-[#2DD3F1] uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-20 md:mb-24">
+          <span className="text-sm font-semibold text-[#2DD3F1] uppercase tracking-widest">
             Latest Insights
           </span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white">
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-white leading-tight">
             Tech Tips, Trends & Company Updates
           </h2>
         </div>
 
         {/* MAIN LAYOUT */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-20">
+
           {/* LEFT SIDEBAR */}
-          <div className="lg:col-span-4 space-y-10">
+          <div className="lg:col-span-5 flex flex-col gap-14">
+
             {/* Feature Posts */}
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-white">
+              <h3 className="text-xl font-semibold mb-8 text-white tracking-wide">
                 Feature Posts
               </h3>
-              <div className="space-y-6">
+              <div className="flex flex-col gap-8">
                 {featurePosts.map((post, i) => (
-                  <div key={i} className="flex gap-4">
+                  <div key={i} className="flex gap-5 items-start">
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-20 h-20 object-cover rounded-md"
+                      className="w-34 h-34 object-cover rounded-lg flex-shrink-0"
                     />
-                    <div>
+                    <div className="pt-1">
                       <Link
                         href={post.href}
-                        className="text-sm font-medium text-white/80 hover:text-[#2DD3F1] transition"
+                        className="text-xl font-medium text-white/80 hover:text-[#2DD3F1] transition leading-relaxed block"
                       >
                         {post.title}
                       </Link>
-                      <p className="text-xs text-white/40 mt-1">{post.date}</p>
+                      <p className="text-xs text-white/40 mt-2">{post.date}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
+            {/* Divider */}
+            <div className="w-full h-px bg-white/10" />
+
             {/* Categories */}
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-white">
+              <h3 className="text-3xl font-semibold mb-8 text-white tracking-wide">
                 Categories
               </h3>
-              <ul className="space-y-3">
+              <ul className="flex flex-col gap-4">
                 {categories.map((cat, i) => (
                   <li key={i}>
                     <Link
                       href={cat.href}
-                      className="text-sm text-white/55 hover:text-[#2DD3F1] transition flex items-center gap-2"
+                      className="text-2xl text-white hover:text-[#2DD3F1] transition flex items-center gap-3 group"
                     >
-                      <span className="text-[#2DD3F1]">›</span>
+                      <span className="text-[#2DD3F1] text-lg leading-none group-hover:translate-x-1 transition-transform duration-200">›</span>
                       {cat.name}
                     </Link>
                   </li>
@@ -129,54 +135,77 @@ const BlogSection: React.FC = () => {
               </ul>
             </div>
 
-            {/* Button */}
-            <Link
-              href="https://hmstech.org/blog"
-              className="inline-block bg-[#2229D2] text-white px-6 py-3 rounded-full hover:bg-[#1B1F9C] transition font-semibold"
-            >
-              Know More
-            </Link>
-          </div>
+            {/* Divider */}
+            <div className="w-full h-px bg-white/10" />
 
-          {/* RIGHT CONTENT */}
-          <div className="lg:col-span-8 space-y-6">
-            {/* BIG BLOG */}
-            <div className="rounded-xl overflow-hidden bg-white/5">
-              <img
-                src={blogs[0].image}
-                alt={blogs[0].title}
-                className="w-full h-72 object-cover"
-              />
-              <div className="p-6">
-                <span className="text-xs text-[#32CD89] font-medium">
-                  {blogs[0].tag}
-                </span>
-                <h3 className="text-xl font-semibold mt-2 text-white hover:text-[#2DD3F1] transition">
-                  <Link href={blogs[0].href}>{blogs[0].title}</Link>
-                </h3>
-              </div>
+            {/* Button */}
+            <div>
+              <Link
+                href="https://hmstech.org/blog"
+                className="inline-block bg-[#2229D2] text-white px-8 py-4 rounded-lg hover:bg-[#1B1F9C] transition font-semibold text-sm tracking-wide"
+              >
+                Know More
+              </Link>
             </div>
+          </div>
+          <div className="lg:col-span-1 flex flex-col gap-14">
+            {/* empty column in between */}
+</div>
+          {/* RIGHT CONTENT */}
+          <div className="lg:col-span-6 flex flex-col gap-8">
+
+ <Link href={blogs[0].href} className="block group">
+              <div className="relative rounded-2xl overflow-hidden h-80 md:h-96">
+                {/* Image */}
+                <img
+                  src={blogs[0].image}
+                  alt={blogs[0].title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+ 
+                {/* Dark overlay gradient — stronger at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+ 
+                {/* Light teal/green gradient at bottom edge */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#2DD3F1]/20 to-transparent" />
+ 
+                {/* Tag pill — top left */}
+                <div className="absolute top-5 left-5">
+                  <span className="bg-[#32CD89] text-[#0d1b2a] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide">
+                    {blogs[0].tag}
+                  </span>
+                </div>
+ 
+                {/* Title — bottom left */}
+                <div className="absolute bottom-0 left-0 right-0 p-7 md:p-8">
+                  <h3 className="text-xl md:text-2xl font-bold text-white leading-snug group-hover:text-[#2DD3F1] transition-colors duration-200">
+                    {blogs[0].title}
+                  </h3>
+                </div>
+              </div>
+            </Link>
 
             {/* SMALL BLOG GRID */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {blogs.slice(1).map((blog, i) => (
-                <div key={i} className="rounded-xl overflow-hidden bg-white/5">
+                <div key={i} className="rounded-2xl overflow-hidden bg-white/5">
                   <img
                     src={blog.image}
                     alt={blog.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-52 object-cover"
                   />
-                  <div className="p-5">
-                    <span className="text-xs text-[#32CD89] font-medium">
+                  <div className="p-6 md:p-8">
+                    <span className="text-xs text-[#32CD89] font-semibold uppercase tracking-widest">
                       {blog.tag}
                     </span>
-                    <h3 className="text-base font-semibold mt-2 text-white hover:text-[#2DD3F1] transition">
+                    <h3 className="text-base font-semibold mt-3 text-white hover:text-[#2DD3F1] transition leading-snug">
                       <Link href={blog.href}>{blog.title}</Link>
                     </h3>
                   </div>
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </div>
