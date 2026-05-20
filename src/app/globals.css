@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
-/* Your custom CSS variables and global styles go AFTER the Tailwind directives */
 :root {
-  --background: #050816;
-  --foreground: #ffffff;
+  --background: #1c221a;
+  --foreground: #F0F4F0;
+  --primary: #7faabb;
+  --secondary: #7ea383;
+  --accent-light: #a3bea1;
+  --text-muted: rgba(240, 244, 240, 0.55);
 }
 
 html {

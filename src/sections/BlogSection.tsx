@@ -71,10 +71,10 @@ const BlogSection: React.FC = () => {
 
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-20 md:mb-24">
-          <span className="text-sm font-semibold text-[#2DD3F1] uppercase tracking-widest">
+          <span className="text-sm font-semibold text-[#7ea383] uppercase tracking-widest">
             Latest Insights
           </span>
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-white leading-tight">
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-[#F0F4F0] leading-tight">
             Tech Tips, Trends & Company Updates
           </h2>
         </div>
@@ -87,7 +87,7 @@ const BlogSection: React.FC = () => {
 
             {/* Feature Posts */}
             <div>
-              <h3 className="text-xl font-semibold mb-8 text-white tracking-wide">
+              <h3 className="text-xl font-semibold mb-8 text-[#F0F4F0] tracking-wide">
                 Feature Posts
               </h3>
               <div className="flex flex-col gap-8">
@@ -101,11 +101,11 @@ const BlogSection: React.FC = () => {
                     <div className="pt-1">
                       <Link
                         href={post.href}
-                        className="text-xl font-medium text-white/80 hover:text-[#2DD3F1] transition leading-relaxed block"
+                        className="text-xl font-medium text-[#F0F4F0]/75 hover:text-[#7faabb] transition leading-relaxed block"
                       >
                         {post.title}
                       </Link>
-                      <p className="text-xs text-white/40 mt-2">{post.date}</p>
+                      <p className="text-xs text-[#F0F4F0]/35 mt-2">{post.date}</p>
                     </div>
                   </div>
                 ))}
@@ -113,11 +113,11 @@ const BlogSection: React.FC = () => {
             </div>
 
             {/* Divider */}
-            <div className="w-full h-px bg-white/10" />
+            <div className="w-full h-px bg-[#7ea383]/15" />
 
             {/* Categories */}
             <div>
-              <h3 className="text-3xl font-semibold mb-8 text-white tracking-wide">
+              <h3 className="text-3xl font-semibold mb-8 text-[#F0F4F0] tracking-wide">
                 Categories
               </h3>
               <ul className="flex flex-col gap-4">
@@ -125,9 +125,9 @@ const BlogSection: React.FC = () => {
                   <li key={i}>
                     <Link
                       href={cat.href}
-                      className="text-2xl text-white hover:text-[#2DD3F1] transition flex items-center gap-3 group"
+                      className="text-2xl text-[#F0F4F0] hover:text-[#7faabb] transition flex items-center gap-3 group"
                     >
-                      <span className="text-[#2DD3F1] text-lg leading-none group-hover:translate-x-1 transition-transform duration-200">›</span>
+                      <span className="text-[#7ea383] text-lg leading-none group-hover:translate-x-1 transition-transform duration-200">›</span>
                       {cat.name}
                     </Link>
                   </li>
@@ -136,49 +136,42 @@ const BlogSection: React.FC = () => {
             </div>
 
             {/* Divider */}
-            <div className="w-full h-px bg-white/10" />
+            <div className="w-full h-px bg-[#7ea383]/15" />
 
             {/* Button */}
             <div>
               <Link
                 href="https://hmstech.org/blog"
-                className="inline-block bg-[#2229D2] text-white px-8 py-4 rounded-lg hover:bg-[#1B1F9C] transition font-semibold text-sm tracking-wide"
+                className="inline-block bg-[#7faabb] text-[#1c221a] px-8 py-4 rounded-lg hover:bg-[#5f8a9b] transition font-semibold text-sm tracking-wide"
               >
                 Know More
               </Link>
             </div>
           </div>
+
           <div className="lg:col-span-1 flex flex-col gap-14">
-            {/* empty column in between */}
-</div>
+            {/* empty spacer column */}
+          </div>
+
           {/* RIGHT CONTENT */}
           <div className="lg:col-span-6 flex flex-col gap-8">
 
- <Link href={blogs[0].href} className="block group">
+            <Link href={blogs[0].href} className="block group">
               <div className="relative rounded-2xl overflow-hidden h-80 md:h-96">
-                {/* Image */}
                 <img
                   src={blogs[0].image}
                   alt={blogs[0].title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
- 
-                {/* Dark overlay gradient — stronger at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
- 
-                {/* Light teal/green gradient at bottom edge */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#2DD3F1]/20 to-transparent" />
- 
-                {/* Tag pill — top left */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#7ea383]/20 to-transparent" />
                 <div className="absolute top-5 left-5">
-                  <span className="bg-[#32CD89] text-[#0d1b2a] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide">
+                  <span className="bg-[#7ea383] text-[#1c221a] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide">
                     {blogs[0].tag}
                   </span>
                 </div>
- 
-                {/* Title — bottom left */}
                 <div className="absolute bottom-0 left-0 right-0 p-7 md:p-8">
-                  <h3 className="text-xl md:text-2xl font-bold text-white leading-snug group-hover:text-[#2DD3F1] transition-colors duration-200">
+                  <h3 className="text-xl md:text-2xl font-bold text-[#F0F4F0] leading-snug group-hover:text-[#7faabb] transition-colors duration-200">
                     {blogs[0].title}
                   </h3>
                 </div>
@@ -188,17 +181,17 @@ const BlogSection: React.FC = () => {
             {/* SMALL BLOG GRID */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {blogs.slice(1).map((blog, i) => (
-                <div key={i} className="rounded-2xl overflow-hidden bg-white/5">
+                <div key={i} className="rounded-2xl overflow-hidden bg-[#F0F4F0]/5 border border-[#7ea383]/10">
                   <img
                     src={blog.image}
                     alt={blog.title}
                     className="w-full h-52 object-cover"
                   />
                   <div className="p-6 md:p-8">
-                    <span className="text-xs text-[#32CD89] font-semibold uppercase tracking-widest">
+                    <span className="text-xs text-[#7ea383] font-semibold uppercase tracking-widest">
                       {blog.tag}
                     </span>
-                    <h3 className="text-base font-semibold mt-3 text-white hover:text-[#2DD3F1] transition leading-snug">
+                    <h3 className="text-base font-semibold mt-3 text-[#F0F4F0] hover:text-[#7faabb] transition leading-snug">
                       <Link href={blog.href}>{blog.title}</Link>
                     </h3>
                   </div>

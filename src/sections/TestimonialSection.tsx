@@ -13,26 +13,22 @@ const testimonials: Testimonial[] = [
   {
     name: "Daniel Smith",
     role: "International Client",
-    message:
-      "Excellent service by HMS Solution. They developed our website and API system efficiently with modern technologies. The team is highly skilled, responsive, and delivers real value. One of the best teams I've worked with.",
+    message: "Excellent service by HMS Solution. They developed our website and API system efficiently with modern technologies. The team is highly skilled, responsive, and delivers real value. One of the best teams I've worked with.",
   },
   {
     name: "Ali Hassan",
     role: "Business Owner",
-    message:
-      "I hired HMS Solution for a custom Laravel project, and they handled everything professionally. From backend logic to frontend UI, everything was well-structured and optimized. I will definitely work with them again.",
+    message: "I hired HMS Solution for a custom Laravel project, and they handled everything professionally. From backend logic to frontend UI, everything was well-structured and optimized. I will definitely work with them again.",
   },
   {
     name: "Sarah Khan",
     role: "Startup Founder",
-    message:
-      "HMS Solution built our mobile app using React Native, and the quality exceeded our expectations. The team understood our requirements quickly and implemented everything perfectly. Their support even after delivery was impressive.",
+    message: "HMS Solution built our mobile app using React Native, and the quality exceeded our expectations. The team understood our requirements quickly and implemented everything perfectly. Their support even after delivery was impressive.",
   },
   {
     name: "Ahmed Raza",
     role: "E-commerce Store Owner",
-    message:
-      "Working with HMS Solution was a great experience. They delivered my Shopify store exactly as I wanted, with a clean design and smooth user experience. Communication was clear and the project was completed on time.",
+    message: "Working with HMS Solution was a great experience. They delivered my Shopify store exactly as I wanted, with a clean design and smooth user experience. Communication was clear and the project was completed on time.",
   },
 ];
 
@@ -46,28 +42,16 @@ const TestimonialSection: React.FC = () => {
   const animateSlide = (direction: "left" | "right", newIndex: number) => {
     if (animating || !slideRef.current) return;
     setAnimating(true);
-
     const exitX = direction === "left" ? -60 : 60;
     const enterX = direction === "left" ? 60 : -60;
-
     gsap.to(slideRef.current, {
-      x: exitX,
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.in",
+      x: exitX, opacity: 0, duration: 0.3, ease: "power2.in",
       onComplete: () => {
         setCurrent(newIndex);
-        gsap.fromTo(
-          slideRef.current,
-          { x: enterX, opacity: 0 },
-          {
-            x: 0,
-            opacity: 1,
-            duration: 0.4,
-            ease: "power2.out",
-            onComplete: () => setAnimating(false),
-          }
-        );
+        gsap.fromTo(slideRef.current, { x: enterX, opacity: 0 }, {
+          x: 0, opacity: 1, duration: 0.4, ease: "power2.out",
+          onComplete: () => setAnimating(false),
+        });
       },
     });
   };
@@ -84,21 +68,12 @@ const TestimonialSection: React.FC = () => {
 
   const handleBtnHover = (btn: HTMLButtonElement | null, enter: boolean) => {
     if (!btn) return;
-    gsap.to(btn, {
-      scale: enter ? 1.1 : 1,
-      duration: 0.2,
-      ease: "power1.out",
-    });
+    gsap.to(btn, { scale: enter ? 1.1 : 1, duration: 0.2, ease: "power1.out" });
   };
 
-  // Initial entrance animation
   useEffect(() => {
     if (slideRef.current) {
-      gsap.fromTo(
-        slideRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }
-      );
+      gsap.fromTo(slideRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" });
     }
   }, []);
 
@@ -106,17 +81,8 @@ const TestimonialSection: React.FC = () => {
 
   return (
     <section className="">
-      <hr className="border-t border-white/30 mb-24" />
+      <hr className="border-t border-[#7ea383]/20 mb-24" />
       <div className="max-w-6xl mx-auto px-4">
-        {/* Heading */}
-        {/* <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-semibold text-[#2DD3F1] uppercase tracking-wider">
-            Testimonials
-          </span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white">
-            What Our Clients Say About Us
-          </h2>
-        </div> */}
 
         {/* Slider */}
         <div className="relative flex items-center gap-4 sm:gap-6">
@@ -126,30 +92,10 @@ const TestimonialSection: React.FC = () => {
             onClick={handlePrev}
             onMouseEnter={() => handleBtnHover(prevBtnRef.current, true)}
             onMouseLeave={() => handleBtnHover(prevBtnRef.current, false)}
-            className="
-            cursor-pointer
-              flex-shrink-0
-              w-10 h-10 sm:w-12 sm:h-12
-              rounded-full
-              border-2 border-[#2DD3F1]
-              text-[#2DD3F1]
-              flex items-center justify-center
-              transition-colors duration-200
-              hover:bg-[#2DD3F1] hover:text-[#0d1b2a]
-              focus:outline-none
-              z-10
-            "
+            className="cursor-pointer flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#7faabb] text-[#7faabb] flex items-center justify-center transition-colors duration-200 hover:bg-[#7faabb] hover:text-[#1c221a] focus:outline-none z-10"
             aria-label="Previous testimonial"
           >
-            <svg
-              viewBox="0 0 24 24"
-              className="w-4 h-4 sm:w-5 sm:h-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
@@ -158,29 +104,13 @@ const TestimonialSection: React.FC = () => {
           <div className="flex-1 overflow-hidden">
             <div ref={slideRef}>
               <div className="rounded-xl p-6 sm:p-8 md:p-10 text-center">
-                {/* Quote icon */}
-                {/* <svg
-                  className="mx-auto mb-4 w-8 h-8 text-[#2DD3F1] opacity-60"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg> */}
-
-                {/* Message */}
-                <p className="text-white/60 leading-relaxed text-sm md:text-base max-w-2xl mx-auto">
+                <p className="text-[#F0F4F0]/60 leading-relaxed text-sm md:text-base max-w-2xl mx-auto">
                   "{item.message}"
                 </p>
-
-                {/* Divider */}
-                <div className="w-12 h-0.5 bg-[#2DD3F1]/40 mx-auto my-5" />
-
-                {/* Author */}
+                <div className="w-12 h-0.5 bg-[#7faabb]/40 mx-auto my-5" />
                 <div>
-                  <h4 className="text-lg font-semibold text-white">
-                    {item.name}
-                  </h4>
-                  <span className="text-sm text-[#88929A]">{item.role}</span>
+                  <h4 className="text-lg font-semibold text-[#F0F4F0]">{item.name}</h4>
+                  <span className="text-sm text-[#a3bea1]">{item.role}</span>
                 </div>
               </div>
             </div>
@@ -192,30 +122,10 @@ const TestimonialSection: React.FC = () => {
             onClick={handleNext}
             onMouseEnter={() => handleBtnHover(nextBtnRef.current, true)}
             onMouseLeave={() => handleBtnHover(nextBtnRef.current, false)}
-            className="
-            cursor-pointer
-              flex-shrink-0
-              w-10 h-10 sm:w-12 sm:h-12
-              rounded-full
-              border-2 border-[#2DD3F1]
-              text-[#2DD3F1]
-              flex items-center justify-center
-              transition-colors duration-200
-              hover:bg-[#2DD3F1] hover:text-[#0d1b2a]
-              focus:outline-none
-              z-10
-            "
+            className="cursor-pointer flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#7faabb] text-[#7faabb] flex items-center justify-center transition-colors duration-200 hover:bg-[#7faabb] hover:text-[#1c221a] focus:outline-none z-10"
             aria-label="Next testimonial"
           >
-            <svg
-              viewBox="0 0 24 24"
-              className="w-4 h-4 sm:w-5 sm:h-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
@@ -231,16 +141,14 @@ const TestimonialSection: React.FC = () => {
                 animateSlide(i > current ? "left" : "right", i);
               }}
               className={`rounded-full cursor-pointer transition-all duration-300 focus:outline-none ${
-                i === current
-                  ? "w-6 h-2 bg-[#2DD3F1]"
-                  : "w-2 h-2 bg-white/20 hover:bg-white/40"
+                i === current ? "w-6 h-2 bg-[#7faabb]" : "w-2 h-2 bg-[#F0F4F0]/20 hover:bg-[#F0F4F0]/40"
               }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}
         </div>
       </div>
-            <hr className="border-t border-white/30 mt-24" />
+      <hr className="border-t border-[#7ea383]/20 mt-24" />
     </section>
   );
 };

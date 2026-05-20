@@ -46,7 +46,7 @@ const socials = [
 
 const FooterBottom: React.FC = () => {
   return (
-    <div className="border-t border-white/10 py-8 mt-20">
+    <div className="border-t border-[#7ea383]/15 py-8 bg-[#161d14]">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
@@ -54,15 +54,15 @@ const FooterBottom: React.FC = () => {
           <Link href="/">
             <img
               src="/logo-bg.png"
-              alt="HMS Tech"
+              alt="TechGenix"
               className="h-14 w-auto"
             />
           </Link>
 
           {/* COPYRIGHT */}
-          <p className="text-sm text-white/40 text-center">
+          <p className="text-sm text-[#F0F4F0]/35 text-center">
             Copyright © 2026{" "}
-            <span className="font-medium text-[#2DD3F1]">Tech Genix</span>. All Rights Reserved.
+            <span className="font-medium text-[#7faabb]">Tech Genix</span>. All Rights Reserved.
           </p>
 
           {/* SOCIAL ICONS */}
@@ -74,14 +74,7 @@ const FooterBottom: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="
-                    w-9 h-9 rounded-full
-                    border border-white/20
-                    flex items-center justify-center
-                    text-white/50
-                    hover:border-[#2DD3F1] hover:text-[#2DD3F1]
-                    transition-colors duration-200
-                  "
+                  className="w-9 h-9 rounded-full border border-[#F0F4F0]/15 flex items-center justify-center text-[#F0F4F0]/45 hover:border-[#7faabb] hover:text-[#7faabb] transition-colors duration-200"
                 >
                   {s.icon}
                 </a>

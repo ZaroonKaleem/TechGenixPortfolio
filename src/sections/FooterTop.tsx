@@ -19,40 +19,40 @@ const quickLinks = [
 
 const FooterTop: React.FC = () => {
   return (
-    <footer className="pt-28 md:pt-36 border-t border-white/10">
+    <footer className="py-28 md:py-36 border-t border-[#7ea383]/15 bg-[#161d14]">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 xl:gap-20">
 
           {/* GET IN TOUCH */}
           <div className="flex flex-col gap-7">
-            <h4 className="text-xl font-semibold text-white tracking-wide">
+            <h4 className="text-xl font-semibold text-[#F0F4F0] tracking-wide">
               Get In Touch
             </h4>
-            <p className="text-base text-white/50 leading-loose">
+            <p className="text-base text-[#F0F4F0]/45 leading-loose">
               Our team comprises professionals with years of experience delivering cutting-edge IT solutions.
             </p>
 
             {/* Email */}
             <div className="flex items-center gap-3">
-              <span className="text-[#2DD3F1] text-lg">✉</span>
+              <span className="text-[#7ea383] text-lg">✉</span>
               <a
-                href="mailto:hmstech11@gmail.com"
-                className="text-base text-white/60 hover:text-[#2DD3F1] transition"
+                href="mailto:techgenix@gmail.com"
+                className="text-base text-[#F0F4F0]/55 hover:text-[#7faabb] transition"
               >
-                techgenix@gmail.com
+                info@techgenixsolutions.com 
               </a>
             </div>
 
             {/* Subscribe form */}
-            <div className="flex items-center bg-white/5 rounded-full overflow-hidden">
+            <div className="flex items-center bg-[#F0F4F0]/5 rounded-full overflow-hidden border border-[#7ea383]/15">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full px-5 py-3 text-sm outline-none bg-transparent text-white placeholder-white/30"
+                className="w-full px-5 py-3 text-sm outline-none bg-transparent text-[#F0F4F0] placeholder-[#F0F4F0]/30"
               />
               <button
                 type="button"
-                className="px-5 py-3 text-[#2DD3F1] hover:bg-[#2229D2] hover:text-white transition"
+                className="px-5 py-3 text-[#7ea383] hover:bg-[#7faabb] hover:text-[#1c221a] transition"
               >
                 ➤
               </button>
@@ -61,7 +61,7 @@ const FooterTop: React.FC = () => {
 
           {/* SERVICES */}
           <div className="flex flex-col gap-7">
-            <h4 className="text-xl font-semibold text-white tracking-wide">
+            <h4 className="text-xl font-semibold text-[#F0F4F0] tracking-wide">
               Services
             </h4>
             <ul className="flex flex-col gap-5">
@@ -69,7 +69,7 @@ const FooterTop: React.FC = () => {
                 <li key={i}>
                   <Link
                     href={service.href}
-                    className="text-base text-white/50 hover:text-[#2DD3F1] transition"
+                    className="text-base text-[#F0F4F0]/45 hover:text-[#7faabb] transition"
                   >
                     {service.name}
                   </Link>
@@ -80,7 +80,7 @@ const FooterTop: React.FC = () => {
 
           {/* QUICK LINKS */}
           <div className="flex flex-col gap-7">
-            <h4 className="text-xl font-semibold text-white tracking-wide">
+            <h4 className="text-xl font-semibold text-[#F0F4F0] tracking-wide">
               Quick Links
             </h4>
             <ul className="flex flex-col gap-5">
@@ -88,7 +88,7 @@ const FooterTop: React.FC = () => {
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-base text-white/50 hover:text-[#2DD3F1] transition"
+                    className="text-base text-[#F0F4F0]/45 hover:text-[#7faabb] transition"
                   >
                     {link.name}
                   </Link>
@@ -99,15 +99,24 @@ const FooterTop: React.FC = () => {
 
           {/* OFFICE */}
           <div className="flex flex-col gap-7">
-            <h4 className="text-xl font-semibold text-white tracking-wide">
+            <h4 className="text-xl font-semibold text-[#F0F4F0] tracking-wide">
               Our Office
             </h4>
             <div className="flex flex-col gap-3">
-              <span className="text-sm text-white/35 uppercase tracking-widest">
-                Head Office
+              <span className="text-sm text-[#F0F4F0]/30 uppercase tracking-widest">
+                Lahore
               </span>
-              <p className="text-base leading-loose text-white/55">
-                Main Bakar Mandi Road, Liaquatabad, Near UBL Bank, Faisalabad.
+              <p className="text-base leading-loose text-[#F0F4F0]/50">
+                  232, 2nd Floor ZamZam Heights Sabzazaar, Lahore.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <span className="text-sm text-[#F0F4F0]/30 uppercase tracking-widest">
+                New Mexico
+              </span>
+              <p className="text-base leading-loose text-[#F0F4F0]/50">
+                  1209 MOUNTAIN ROAD PL NE #4877, Albuquerque, NM, 87110
               </p>
             </div>
           </div>
