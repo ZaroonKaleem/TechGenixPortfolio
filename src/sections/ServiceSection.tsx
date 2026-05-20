@@ -39,12 +39,12 @@ const services: ServiceItem[] = [
 
 const ServiceSection: React.FC = () => {
   return (
-    <section id="services" className="py-24 bg-[#161d14]">
+    <section id="services" className="py-24 bg-[#002830]">
       <div className="max-w-8xl mx-auto px-6 sm:px-10">
 
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-flex mb-6 items-center px-5 py-2 text-sm font-semibold tracking-wider rounded-full bg-[#7ea383]/10 text-[#7ea383] border border-[#7ea383]/25">
+          <span className="inline-flex mb-6 items-center px-5 py-2 text-sm font-semibold tracking-wider rounded-full bg-[#00A3A9]/10 text-[#00A3A9] border border-[#00A3A9]/25">
             What We Offer
           </span>
           <h2 className="mt-2 text-3xl md:text-4xl font-bold text-[#F0F4F0]">
@@ -58,7 +58,7 @@ const ServiceSection: React.FC = () => {
             <div
               key={index}
               // Fixed 320x320 size, added shrink-0 so they don't squish, added overflow-hidden in case text is too long
-              className="group flex w-[310px] h-[310px] shrink-0 overflow-hidden flex-col rounded-xl border border-[#7ea383]/10 bg-[#F0F4F0]/5 p-7 text-left transition-all duration-300 hover:border-transparent hover:bg-[#7ea383] sm:p-8"
+              className="group flex w-[310px] h-[310px] shrink-0 overflow-hidden flex-col rounded-xl border border-[#00A3A9]/10 bg-[#F0F4F0]/5 p-7 text-left transition-all duration-300 hover:border-transparent hover:bg-[#00A3A9] sm:p-8"
             >
               {/* Top: Icon + Title + Description */}
               <div className="flex h-full flex-col">
@@ -66,12 +66,12 @@ const ServiceSection: React.FC = () => {
                 {/* Top Content */}
                 <div>
                   {/* Icon */}
-                  <div className="mb-5 text-4xl text-[#7ea383] transition-colors ">
+                  <div className="mb-5 text-4xl text-[#00A3A9] transition-colors ">
                     {service.icon}
                   </div>
 
                   {/* Title */}
-                  <h4 className="mb-3 text-xl font-semibold leading-snug text-[#F0F4F0] transition-colors group-hover:text-[#1c221a]">
+                  <h4 className="mb-3 text-xl font-semibold leading-snug text-[#F0F4F0] transition-colors group-hover:text-[#003B46]">
                     <Link
                       href={service.href}
                       className="transition-colors duration-300"
@@ -83,7 +83,7 @@ const ServiceSection: React.FC = () => {
 
                 {/* Push Description to Bottom */}
                 <div className="mt-auto pt-4">
-                  <p className="text-sm text-justify leading-relaxed text-[#F0F4F0]/60 transition-colors duration-300 group-hover:text-[#1c221a]/80">
+                  <p className="text-sm text-justify leading-relaxed text-[#F0F4F0]/60 transition-colors duration-300 group-hover:text-[#003B46]/80">
                     {service.description}
                   </p>
                 </div>

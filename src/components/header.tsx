@@ -56,7 +56,7 @@ const Header: React.FC = () => {
     <>
       {/* ── HEADER BAR ── */}
       <div className="fixed top-4 sm:top-6 left-0 right-0 z-50 flex justify-center px-4 md:px-8 box-border pointer-events-none">
-        <header className="pointer-events-auto flex w-full md:max-w-7xl items-center justify-between rounded-full bg-[#242d22] px-4 sm:px-6 py-3 shadow-xl border border-[#7ea383]/15 box-border">
+        <header className="pointer-events-auto flex w-full md:max-w-7xl items-center justify-between rounded-full bg-[#004d5c] px-4 sm:px-6 py-3 shadow-xl border border-[#00A3A9]/15 box-border">
 
           {/* LEFT — logo + desktop nav */}
           <div className="flex items-center gap-6 lg:gap-16 shrink-0">
@@ -69,7 +69,7 @@ const Header: React.FC = () => {
                 <button
                   key={id}
                   onClick={() => scrollTo(id)}
-                  className="text-[15px] font-medium text-[#F0F4F0]/75 transition-colors duration-300 hover:text-[#7ea383] bg-transparent border-0 cursor-pointer"
+                  className="text-[15px] font-medium text-[#F0F4F0]/75 transition-colors duration-300 hover:text-[#00A3A9] bg-transparent border-0 cursor-pointer"
                 >
                   {label}
                 </button>
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
     const el = document.getElementById("cta");
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   }}
-  className="group hidden cursor-pointer lg:flex items-center gap-2 rounded-full bg-[#7faabb] px-6 py-2.5 text-[15px] font-semibold text-[#1c221a] transition-all duration-300 hover:bg-[#5f8a9b] hover:scale-105"
+  className="group hidden cursor-pointer lg:flex items-center gap-2 rounded-full bg-[#008C8B] px-6 py-2.5 text-[15px] font-semibold text-[#003B46] transition-all duration-300 hover:bg-[#006d6d] hover:scale-105"
 >
   Contact Now
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
             <button
               onClick={openDrawer}
               aria-label="Open menu"
-              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] rounded-full border border-[#7ea383]/20 bg-[#7ea383]/5 hover:bg-[#7ea383]/10 transition shrink-0"
+              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] rounded-full border border-[#00A3A9]/20 bg-[#00A3A9]/5 hover:bg-[#00A3A9]/10 transition shrink-0"
             >
               <span className="w-5 h-0.5 bg-[#F0F4F0]/80 rounded-full" />
               <span className="w-5 h-0.5 bg-[#F0F4F0]/80 rounded-full" />
@@ -111,18 +111,18 @@ const Header: React.FC = () => {
       <div
         ref={overlayRef}
         onClick={closeDrawer}
-        className="fixed inset-0 z-[60] bg-[#1c221a]/70 backdrop-blur-sm lg:hidden"
+        className="fixed inset-0 z-[60] bg-[#003B46]/70 backdrop-blur-sm lg:hidden"
         style={{ opacity: 0, pointerEvents: open ? "auto" : "none" }}
       />
 
       {/* ── FULL-SCREEN DRAWER ── */}
       <aside
         ref={drawerRef}
-        className="fixed top-0 left-0 z-[70] h-[100dvh] w-full bg-[#161d14] flex flex-col lg:hidden overflow-hidden box-border"
+        className="fixed top-0 left-0 z-[70] h-[100dvh] w-full bg-[#002830] flex flex-col lg:hidden overflow-hidden box-border"
         style={{ transform: "translateX(-100%)" }}
       >
         {/* Top bar inside drawer */}
-        <div className="flex items-center justify-between px-6 py-5 sm:px-8 sm:py-7 border-b border-[#7ea383]/15 shrink-0">
+        <div className="flex items-center justify-between px-6 py-5 sm:px-8 sm:py-7 border-b border-[#00A3A9]/15 shrink-0">
           <div ref={logoRef} style={{ opacity: 0 }}>
             <Link href="/" onClick={closeDrawer}>
               <Image src="/logo.png" alt="TechGenix Logo" width={40} height={40} className="sm:w-[48px] sm:h-[48px]" priority />
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
           <button
             onClick={closeDrawer}
             aria-label="Close menu"
-            className="w-10 h-10 rounded-full border border-[#F0F4F0]/20 flex items-center justify-center text-[#F0F4F0]/60 hover:text-[#7ea383] hover:border-[#7ea383]/50 transition shrink-0"
+            className="w-10 h-10 rounded-full border border-[#F0F4F0]/20 flex items-center justify-center text-[#F0F4F0]/60 hover:text-[#00A3A9] hover:border-[#00A3A9]/50 transition shrink-0"
           >
             <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
               <line x1="18" y1="6" x2="6" y2="18" />
@@ -149,7 +149,7 @@ const Header: React.FC = () => {
               ref={(el) => { if (el) linksRef.current[i] = el; }}
               onClick={() => scrollTo(id)}
               style={{ opacity: 0 }}
-              className="text-left text-3xl min-[400px]:text-4xl sm:text-5xl font-bold text-[#F0F4F0] uppercase tracking-tight py-4 sm:py-5 border-b border-[#7ea383]/15 last:border-b-0 hover:text-[#7ea383] transition-colors duration-200 bg-transparent border-x-0 border-t-0 cursor-pointer w-full box-border"
+              className="text-left text-3xl min-[400px]:text-4xl sm:text-5xl font-bold text-[#F0F4F0] uppercase tracking-tight py-4 sm:py-5 border-b border-[#00A3A9]/15 last:border-b-0 hover:text-[#00A3A9] transition-colors duration-200 bg-transparent border-x-0 border-t-0 cursor-pointer w-full box-border"
             >
               {label}
             </button>
@@ -160,7 +160,7 @@ const Header: React.FC = () => {
         <div ref={ctaRef} className="px-6 sm:px-10 pb-8 sm:pb-14 pt-4 shrink-0" style={{ opacity: 0 }}>
           <button
   onClick={() => scrollTo("cta")}
-  className="group hidden lg:flex items-center gap-2 rounded-full bg-[#7faabb] px-6 py-2.5 text-[15px] font-semibold text-[#1c221a] transition-all duration-300 hover:bg-[#5f8a9b] hover:scale-105"
+  className="group hidden lg:flex items-center gap-2 rounded-full bg-[#008C8B] px-6 py-2.5 text-[15px] font-semibold text-[#003B46] transition-all duration-300 hover:bg-[#006d6d] hover:scale-105"
 >
             Contact Now
           </button>

@@ -24,7 +24,7 @@ const accordionItems: AccordionItem[] = [
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#7ea383"
+        stroke="#00A3A9"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -48,7 +48,7 @@ const accordionItems: AccordionItem[] = [
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#7ea383"
+        stroke="#00A3A9"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -71,7 +71,7 @@ const accordionItems: AccordionItem[] = [
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#7ea383"
+        stroke="#00A3A9"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -94,7 +94,7 @@ const accordionItems: AccordionItem[] = [
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#7ea383"
+        stroke="#00A3A9"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -115,7 +115,7 @@ const WhyChooseSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-semibold text-[#7ea383] uppercase tracking-wider">
+          <span className="text-sm font-semibold text-[#00A3A9] uppercase tracking-wider">
             Why Choose TECHGENIX
           </span>
           <h2 className="mt-2 text-3xl md:text-4xl font-bold text-[#F0F4F0]">
@@ -135,15 +135,15 @@ const WhyChooseSection: React.FC = () => {
 
             {/* STATS CARD */}
             <div className="absolute bottom-0 left-2 right-2">
-              <div className="bg-[#242d22]/95 backdrop-blur rounded-lg grid grid-cols-2 border border-[#7ea383]/15">
+              <div className="bg-[#004d5c]/95 backdrop-blur rounded-lg grid grid-cols-2 border border-[#00A3A9]/15">
                 <div className="p-5 text-center">
-                  <h2 className="text-2xl font-bold text-[#7ea383]">50+</h2>
+                  <h2 className="text-2xl font-bold text-[#00A3A9]">50+</h2>
                   <span className="text-xs text-[#F0F4F0]/55 uppercase tracking-wider">
                     Successful Projects
                   </span>
                 </div>
-                <div className="p-5 text-center border-l border-[#7ea383]/15">
-                  <h2 className="text-2xl font-bold text-[#7ea383]">100%</h2>
+                <div className="p-5 text-center border-l border-[#00A3A9]/15">
+                  <h2 className="text-2xl font-bold text-[#00A3A9]">100%</h2>
                   <span className="text-xs text-[#F0F4F0]/55 uppercase tracking-wider">
                     Client Satisfaction
                   </span>
@@ -163,7 +163,7 @@ const WhyChooseSection: React.FC = () => {
                 <div
                   className={`flex-1 rounded-xl overflow-hidden transition-colors duration-300 ${
                     openId === item.id
-                      ? "bg-[#7faabb]/10 border border-[#7faabb]/20"
+                      ? "bg-[#008C8B]/10 border border-[#008C8B]/20"
                       : "bg-[#F0F4F0]/5 border border-transparent"
                   }`}
                 >
@@ -173,7 +173,7 @@ const WhyChooseSection: React.FC = () => {
                     onClick={() => setOpenId(openId === item.id ? "" : item.id)}
                   >
                     <span className="font-semibold text-2xl text-[#F0F4F0] text-left">
-                      <span className="text-[#7faabb] text-2xl mr-2">
+                      <span className="text-[#008C8B] text-2xl mr-2">
                         {item.number}
                       </span>
                       {item.title}
@@ -181,7 +181,7 @@ const WhyChooseSection: React.FC = () => {
 
                     <svg
                       viewBox="0 0 24 24"
-                      className={`w-5 h-5 text-[#7faabb] flex-shrink-0 transition-transform duration-300 ${
+                      className={`w-5 h-5 text-[#008C8B] flex-shrink-0 transition-transform duration-300 ${
                         openId === item.id ? "rotate-180" : "rotate-0"
                       }`}
                       fill="none"

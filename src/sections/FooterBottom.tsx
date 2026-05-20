@@ -46,7 +46,7 @@ const socials = [
 
 const FooterBottom: React.FC = () => {
   return (
-    <div className="border-t border-[#7ea383]/15 py-8 bg-[#161d14]">
+    <div className="border-t border-[#00A3A9]/15 py-8 bg-[#002830]">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
@@ -62,7 +62,7 @@ const FooterBottom: React.FC = () => {
           {/* COPYRIGHT */}
           <p className="text-sm text-[#F0F4F0]/35 text-center">
             Copyright © 2026{" "}
-            <span className="font-medium text-[#7faabb]">Tech Genix</span>. All Rights Reserved.
+            <span className="font-medium text-[#008C8B]">Tech Genix</span>. All Rights Reserved.
           </p>
 
           {/* SOCIAL ICONS */}
@@ -74,7 +74,7 @@ const FooterBottom: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-full border border-[#F0F4F0]/15 flex items-center justify-center text-[#F0F4F0]/45 hover:border-[#7faabb] hover:text-[#7faabb] transition-colors duration-200"
+                  className="w-9 h-9 rounded-full border border-[#F0F4F0]/15 flex items-center justify-center text-[#F0F4F0]/45 hover:border-[#008C8B] hover:text-[#008C8B] transition-colors duration-200"
                 >
                   {s.icon}
                 </a>

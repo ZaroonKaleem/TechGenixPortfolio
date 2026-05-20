@@ -19,7 +19,7 @@ const quickLinks = [
 
 const FooterTop: React.FC = () => {
   return (
-    <footer className="py-28 md:py-36 border-t border-[#7ea383]/15 bg-[#161d14]">
+    <footer className="py-28 md:py-36 border-t border-[#00A3A9]/15 bg-[#002830]">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 xl:gap-20">
 
@@ -34,17 +34,17 @@ const FooterTop: React.FC = () => {
 
             {/* Email */}
             <div className="flex items-center gap-3">
-              <span className="text-[#7ea383] text-lg">✉</span>
+              <span className="text-[#00A3A9] text-lg">✉</span>
               <a
                 href="mailto:techgenix@gmail.com"
-                className="text-base text-[#F0F4F0]/55 hover:text-[#7faabb] transition"
+                className="text-base text-[#F0F4F0]/55 hover:text-[#008C8B] transition"
               >
                 info@techgenixsolutions.com 
               </a>
             </div>
 
             {/* Subscribe form */}
-            <div className="flex items-center bg-[#F0F4F0]/5 rounded-full overflow-hidden border border-[#7ea383]/15">
+            <div className="flex items-center bg-[#F0F4F0]/5 rounded-full overflow-hidden border border-[#00A3A9]/15">
               <input
                 type="email"
                 placeholder="Email Address"
@@ -52,7 +52,7 @@ const FooterTop: React.FC = () => {
               />
               <button
                 type="button"
-                className="px-5 py-3 text-[#7ea383] hover:bg-[#7faabb] hover:text-[#1c221a] transition"
+                className="px-5 py-3 text-[#00A3A9] hover:bg-[#008C8B] hover:text-[#003B46] transition"
               >
                 ➤
               </button>
@@ -69,7 +69,7 @@ const FooterTop: React.FC = () => {
                 <li key={i}>
                   <Link
                     href={service.href}
-                    className="text-base text-[#F0F4F0]/45 hover:text-[#7faabb] transition"
+                    className="text-base text-[#F0F4F0]/45 hover:text-[#008C8B] transition"
                   >
                     {service.name}
                   </Link>
@@ -88,7 +88,7 @@ const FooterTop: React.FC = () => {
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-base text-[#F0F4F0]/45 hover:text-[#7faabb] transition"
+                    className="text-base text-[#F0F4F0]/45 hover:text-[#008C8B] transition"
                   >
                     {link.name}
                   </Link>

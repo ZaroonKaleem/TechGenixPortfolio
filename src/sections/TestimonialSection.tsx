@@ -81,7 +81,7 @@ const TestimonialSection: React.FC = () => {
 
   return (
     <section className="">
-      <hr className="border-t border-[#7ea383]/20 mb-24" />
+      <hr className="border-t border-[#00A3A9]/20 mb-24" />
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Slider */}
@@ -92,7 +92,7 @@ const TestimonialSection: React.FC = () => {
             onClick={handlePrev}
             onMouseEnter={() => handleBtnHover(prevBtnRef.current, true)}
             onMouseLeave={() => handleBtnHover(prevBtnRef.current, false)}
-            className="cursor-pointer flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#7faabb] text-[#7faabb] flex items-center justify-center transition-colors duration-200 hover:bg-[#7faabb] hover:text-[#1c221a] focus:outline-none z-10"
+            className="cursor-pointer flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#008C8B] text-[#008C8B] flex items-center justify-center transition-colors duration-200 hover:bg-[#008C8B] hover:text-[#003B46] focus:outline-none z-10"
             aria-label="Previous testimonial"
           >
             <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -107,10 +107,10 @@ const TestimonialSection: React.FC = () => {
                 <p className="text-[#F0F4F0]/60 leading-relaxed text-sm md:text-base max-w-2xl mx-auto">
                   "{item.message}"
                 </p>
-                <div className="w-12 h-0.5 bg-[#7faabb]/40 mx-auto my-5" />
+                <div className="w-12 h-0.5 bg-[#008C8B]/40 mx-auto my-5" />
                 <div>
                   <h4 className="text-lg font-semibold text-[#F0F4F0]">{item.name}</h4>
-                  <span className="text-sm text-[#a3bea1]">{item.role}</span>
+                  <span className="text-sm text-[#33bec3]">{item.role}</span>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ const TestimonialSection: React.FC = () => {
             onClick={handleNext}
             onMouseEnter={() => handleBtnHover(nextBtnRef.current, true)}
             onMouseLeave={() => handleBtnHover(nextBtnRef.current, false)}
-            className="cursor-pointer flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#7faabb] text-[#7faabb] flex items-center justify-center transition-colors duration-200 hover:bg-[#7faabb] hover:text-[#1c221a] focus:outline-none z-10"
+            className="cursor-pointer flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#008C8B] text-[#008C8B] flex items-center justify-center transition-colors duration-200 hover:bg-[#008C8B] hover:text-[#003B46] focus:outline-none z-10"
             aria-label="Next testimonial"
           >
             <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -141,14 +141,14 @@ const TestimonialSection: React.FC = () => {
                 animateSlide(i > current ? "left" : "right", i);
               }}
               className={`rounded-full cursor-pointer transition-all duration-300 focus:outline-none ${
-                i === current ? "w-6 h-2 bg-[#7faabb]" : "w-2 h-2 bg-[#F0F4F0]/20 hover:bg-[#F0F4F0]/40"
+                i === current ? "w-6 h-2 bg-[#008C8B]" : "w-2 h-2 bg-[#F0F4F0]/20 hover:bg-[#F0F4F0]/40"
               }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}
         </div>
       </div>
-      <hr className="border-t border-[#7ea383]/20 mt-24" />
+      <hr className="border-t border-[#00A3A9]/20 mt-24" />
     </section>
   );
 };
